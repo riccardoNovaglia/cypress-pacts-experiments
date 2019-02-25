@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Some demo!</title>
+</head>
+
+<body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <p id="content"></p>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('http://localhost:3000/api/someInfo')
+            .then((response) => {
+                document.getElementById('content').innerHTML = response.data.content;
+            });
+    </script>
+</body>
+
+</html>
