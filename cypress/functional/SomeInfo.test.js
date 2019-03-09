@@ -16,4 +16,12 @@ describe('Showing some info on the page', () => {
 
         cy.get('p').contains('things!');
     });
+
+    it('something', (done) => {
+        // cy.stub();
+
+        setTimeout(() => {
+            done();
+        }, 30000);
+    });
 });
